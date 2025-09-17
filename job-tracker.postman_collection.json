@@ -1,0 +1,96 @@
+{
+    "info": {
+      "name": "Job Tracker API",
+      "_postman_id": "c583e2b8-91cc-4b4c-aeaf-7a713bcb8b4a",
+      "description": "Test CRUD operations for Job Tracker API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Create Application",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"company\": \"OpenAI\",\n  \"position\": \"Backend Engineer\",\n  \"status\": \"Applied\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/applications",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["applications"]
+          }
+        }
+      },
+      {
+        "name": "Get All Applications",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:3000/applications",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["applications"]
+          }
+        }
+      },
+      {
+        "name": "Get Single Application",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:3000/applications/1",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["applications", "1"]
+          }
+        }
+      },
+      {
+        "name": "Update Application",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"company\": \"OpenAI\",\n  \"position\": \"Senior Backend Engineer\",\n  \"status\": \"Interview\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/applications/1",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["applications", "1"]
+          }
+        }
+      },
+      {
+        "name": "Delete Application",
+        "request": {
+          "method": "DELETE",
+          "url": {
+            "raw": "http://localhost:3000/applications/1",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["applications", "1"]
+          }
+        }
+      }
+    ]
+  }
+  
